@@ -9,6 +9,21 @@ class RockPaperScissors < Sinatra::Base
     erb :index
   end
 
+  get '/new_game' do
+  	erb :new_game
+  end
+
+  post '/sign_up' do
+	 	@name = params[:name]
+	 	erb :start_game
+	end
+
+  get '/start_game' do
+  	@name = params[:name]
+  	erb :start_game
+  end
+
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

@@ -1,0 +1,18 @@
+<body>
+
+<% if @name == "" %>
+		<% @name = "Player" %>
+	<%  end %>
+	<h2><%= @name %>, Select Your Weapon:</h2>
+
+	<ul>
+		<li>Rock</li>
+		<li>Paper</li>
+		<li>Scissors</li>
+	</ul>
+
+<form action="/game_result" method="post">
+      <button type="submit">Battle</button>
+    </form>
+
+</body>
