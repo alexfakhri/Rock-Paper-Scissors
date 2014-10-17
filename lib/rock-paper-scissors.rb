@@ -18,6 +18,11 @@ class RockPaperScissors < Sinatra::Base
 	 	erb :start_game
 	end
 
+   post '/start_game' do
+    @name = params[:name]
+    erb :start_game
+  end
+
   get '/start_game' do
   	@name = params[:name]
   	erb :start_game
