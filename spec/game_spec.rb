@@ -38,6 +38,19 @@ let(:computer) {double :computer, name: 'computer'}
 		expect(game.winner(:rock, :paper)).to eq "Computer wins"
 	end
 
+ 	it "should be able to recognise the winner of paper and scissors" do
+ 		allow(player).to receive(:weapon).and_return :paper
+		allow(computer).to receive(:weapon).and_return :scissors
+		expect(game.winner(:paper, :scissors)).to eq "Computer wins"
+	end
+
+
+ 	it "should be able to recognise the winner of scissors and paper" do
+ 		allow(player).to receive(:weapon).and_return :scissors
+		allow(computer).to receive(:weapon).and_return :paper
+		expect(game.winner(:scissors, :paper)).to eq "Player wins"
+	end
+
 
 	
 end
