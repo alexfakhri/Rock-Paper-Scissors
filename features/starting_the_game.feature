@@ -1,4 +1,4 @@
-Feature: Playong the agme
+Feature: Playing the agme
   In order to play rock, paper, scisors
   I will need to select my weapon of choice
 

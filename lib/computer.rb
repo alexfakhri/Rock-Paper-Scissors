@@ -7,9 +7,5 @@ class Computer
 	def select_gesture
 		gestures.sample
 	end
-
-
-
-
-
+	
 end

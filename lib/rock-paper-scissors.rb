@@ -28,6 +28,12 @@ class RockPaperScissors < Sinatra::Base
   	erb :start_game
   end
 
+  
+
+  post '/game_result' do
+    "Hello World"
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0

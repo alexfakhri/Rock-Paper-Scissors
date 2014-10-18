@@ -13,7 +13,4 @@ describe Computer do
 		expect(computer.select_gesture).to be_a Symbol
 	end
 
-
-
-
-	end
+end

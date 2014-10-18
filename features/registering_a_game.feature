@@ -1,8 +1,8 @@
-Feature: Starting the game
+Feature: Registering
   In order to play rock, paper, scisors
   I will need to start a new game
 
-  Scenario: Starting a game
+  Scenario: Loading the site
     Given I am on the homepage
     When I see "Welcome to Rock, Paper, Scissors"
     Then I follow "Start A New Game"
