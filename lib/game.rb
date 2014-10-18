@@ -7,9 +7,12 @@ class Game
 
 	attr_accessor :players, :player
 
+	GESTURES = { paper: :rock }
 
-	def winner
-		return "Draw"
+
+	def winner(player_gesture, computer_gesture)
+		return "Draw" if player_gesture == computer_gesture
+		return "Player wins" if GESTURES[player_gesture] == computer_gesture
 	end
 
 end

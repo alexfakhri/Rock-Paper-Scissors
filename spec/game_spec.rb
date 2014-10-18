@@ -15,9 +15,23 @@ let(:computer) {double :computer, name: 'computer'}
  	end
 
  	it "Should recognise when a game is a draw" do
- 		expect(game.winner).to eq "Draw"
+ 		expect(game.winner(:rock, :rock)).to eq "Draw"
  	end
 
- 	
+ 	it "Should recognise when a game is a draw" do
+ 		expect(game.winner(:scissors, :scissors)).to eq "Draw"
+ 	end
+
+ 	it "Should recognise when a game is a draw" do
+ 		expect(game.winner(:paper, :paper)).to eq "Draw"
+ 	end
+
+ 	it "should be able to recognise the winner of paper and rock" do
+ 		allow(player).to receive(:weapon).and_return :paper
+		allow(computer).to receive(:weapon).and_return :rock
+		expect(game.winner(:paper, :rock)).to eq "Player wins"
+	end
+
+
 	
 end
