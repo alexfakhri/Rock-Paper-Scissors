@@ -7,4 +7,9 @@ class Game
 
 	attr_accessor :players, :player
 
+
+	def winner
+		return "Draw"
+	end
+
 end

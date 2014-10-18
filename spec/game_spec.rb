@@ -14,6 +14,10 @@ let(:computer) {double :computer, name: 'computer'}
  		expect(game.player).to eq player
  	end
 
+ 	it "Should recognise when a game is a draw" do
+ 		expect(game.winner).to eq "Draw"
+ 	end
+
  	
 	
 end
