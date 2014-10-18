@@ -7,7 +7,7 @@ class Game
 
 	attr_accessor :players, :player
 
-	GESTURES = { paper: :rock , scissors: :paper}
+	GESTURES = { paper: :rock , scissors: :paper, rock: :scissors}
 
 
 	def winner(player_gesture, computer_gesture)
