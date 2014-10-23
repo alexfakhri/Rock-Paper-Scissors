@@ -1,0 +1,23 @@
+<h1>And the winner is...</h1>
+<section class="weapon_choice">
+
+	<section class="player_gesture">
+	Your choice was <%= @player_gesture %>
+	</section>
+
+	<section class="computer_choice">
+	Computer's choice was <%= @computer_gesture %>
+	</section><br>
+
+	<h4><% if @result == "Player wins" %>
+			<%= @name %> wins!
+		<% elsif @result == "Computer wins" %>
+			Computer wins!
+		<% else @result == "Draw" %>
+			It's a Draw!
+		<% end %>
+	</h4>
+
+	</section>
+	
+	<a class="myButton" href="/start_game">Play again</a>

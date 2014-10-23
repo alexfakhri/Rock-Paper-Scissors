@@ -6,10 +6,10 @@ class Player
 	end
 
 	attr_reader :name
-	attr_writer :select_weapon
+	attr_writer :select_gesture
 
-	def select_weapon
-		@select_weapon
+	def select_gesture
+		@select_gesture
 	end
 
 end

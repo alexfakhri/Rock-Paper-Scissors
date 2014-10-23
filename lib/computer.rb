@@ -1,7 +1,7 @@
 class Computer
 
 	def gestures
-		[:rock, :scissors, :paprer]
+		[:rock, :scissors, :paper]
 	end
 
 	def select_gesture

@@ -8,9 +8,9 @@ describe Player do
 		expect(player.name).to eq "Alex"
 	end
 
-	it "Should be able to select a weapon" do
-		player.select_weapon = "Rock"
-		expect(player.select_weapon).to eq("Rock")
+	it "Should be able to select a gesture" do
+		player.select_gesture = "Rock"
+		expect(player.select_gesture).to eq("Rock")
 	end
 
 end
