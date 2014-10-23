@@ -6,4 +6,3 @@ Feature: Playing the agme
 		Given I am on the start game page
 		And I should be able to see: Alex, Select Your Weapon:
 		When I should be able to select my weapon "Rock" "Paper" or "Scissors?"
-		Then I should click "Battle"

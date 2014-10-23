@@ -1,13 +1,16 @@
-<h1>And the winner is...</h1>
+<h1>Rock, Paper, Scissors</h1>
+
+
 <section class="weapon_choice">
 
 	<section class="player_gesture">
-	Your choice was <%= @player_gesture %>
+	<h4>Your choice was <%= @player_gesture %></h4>
 	</section>
-
 	<section class="computer_choice">
-	Computer's choice was <%= @computer_gesture %>
+	<h4>Computer's choice was <%= @computer_gesture %></h4>
 	</section><br>
+
+	<h2>And the winner is...</h2>
 
 	<h4><% if @result == "Player wins" %>
 			<%= @name %> wins!

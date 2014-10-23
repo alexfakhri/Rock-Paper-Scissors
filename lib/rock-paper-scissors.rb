@@ -8,6 +8,8 @@ class RockPaperScissors < Sinatra::Base
 	set :views, Proc.new { File.join(root, "..", "views") }
 	set :public_folder, settings.root + '/../public/'
 
+  enable :sessions
+
   player = Player.new(@name)
   computer = Computer.new
   game = Game.new(player, computer)
@@ -20,31 +22,26 @@ class RockPaperScissors < Sinatra::Base
   	erb :new_game
   end
 
-  post '/sign_up' do
+  post '/start_game' do
 	 	@name = params[:name]
+    session[:name] = @name
 	 	erb :start_game
 	end
 
-   post '/start_game' do
-    @name = params[:name]
-    erb :start_game
-  end
-
   get '/start_game' do
-  	@name = params[:name]
+  	@name = session[:name]
   	erb :start_game
   end
 
   post '/game_result' do
+    @name = session[:name]
     @player_gesture = params[:player_gesture].to_sym
-    @computer_choice = computer.select_gesture
+    @computer_gesture = computer.select_gesture
     @result = game.winner(@player_gesture, @computer_gesture)
     erb :game_result
   end
 
-  post '/game_result' do
-    erb :game_result
-  end
+
 
 
   # start the server if ruby file executed directly
